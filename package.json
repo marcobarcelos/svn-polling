@@ -1,0 +1,31 @@
+{
+  "name": "svn-polling",
+  "version": "0.1.0",
+  "description": "A SVN Log Polling mechanism for NodeJS",
+  "main": "index.js",
+  "repository": "marcobarcelos/svn-polling",
+  "keywords": [
+    "svn",
+    "log",
+    "polling",
+    "commit",
+    "node",
+    "history",
+    "modifications"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "author": {
+    "name": "Marco Barcelos",
+    "email": "me@marcobarcelos.com",
+    "url": "marcobarcelos.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "arrify": "^1.0.1",
+    "node-persist": "^2.0.7",
+    "pify-proto": "^0.1.1",
+    "svn-spawn": "^0.1.5"
+  }
+}
