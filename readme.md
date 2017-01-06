@@ -1,5 +1,8 @@
 # svn-polling
 
+[![npm](https://img.shields.io/npm/v/svn-polling.svg)](https://www.npmjs.com/package/svn-polling)
+![npm](https://img.shields.io/npm/l/svn-polling.svg)
+
 > 🕓 A SVN Log Polling mechanism for NodeJS.
 
 ## Install
@@ -40,15 +43,14 @@ polling.start();
 
 ```js
 {
-  "maxRevision": 2,
-  "minRevision": 1,
+  "revision": 2,
   "logs": [
     {
       "revision": "1",
       "author": "marcobarcelos",
       "date": "2017-01-05T03:29:42.036677Z",
       "msg": "Add index.js",
-      "paths": [
+      "changes": [
         {
           "action": "A",
           "path": "/index.js"
@@ -60,7 +62,7 @@ polling.start();
       "author": "marcobarcelos",
       "date": "2017-01-05T03:30:20.881618Z",
       "msg": "Add readme.md",
-      "paths": [
+      "changes": [
         {
           "action": "A",
           "path": "/readme.md"
@@ -79,7 +81,9 @@ You can configure some options by passing it into the constructor:
 const options = {
 	remoteUrl: 'svn://your-svn-project-url.com/code/trunk',
 	pollInterval: 1000,
-	logsLimit: 5
+	logsLimit: 10,
+  username: 'marcobarcelos',
+  password: 'ultrasecret'
 };
 
 const polling = new SvnPolling(options);
@@ -104,6 +108,20 @@ Type: `number`<br>
 Default: `5`
 
 How many logs/commits to retrieve by the first time.
+
+### username
+
+Type: `string`<br>
+Optional *(in case authentication is not required or is already saved)*
+
+The svn user's username.
+
+### password
+
+Type: `string`<br>
+Optional *(in case authentication is not required or is already saved)*
+
+The svn user's password.
 
 ## License
 
