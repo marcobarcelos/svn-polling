@@ -82,8 +82,8 @@ const options = {
 	remoteUrl: 'svn://your-svn-project-url.com/code/trunk',
 	pollInterval: 1000,
 	logsLimit: 10,
-  username: 'marcobarcelos',
-  password: 'ultrasecret'
+	username: 'marcobarcelos',
+	password: 'ultrasecret'
 };
 
 const polling = new SvnPolling(options);
